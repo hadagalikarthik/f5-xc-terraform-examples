@@ -4,12 +4,12 @@ vk8s = false
 xc_project_prefix = "demo"
 
 #XC Global
-api_url = "https://<Your Tenant>.console.ves.volterra.io/api"
-xc_tenant = "Your tenant name"
-xc_namespace = "Your XC namespace"
+api_url = "https://treino.console.ves.volterra.io/api"
+xc_tenant = "treino-ufahspac"
+xc_namespace = "hk-namespace"
 
 #XC LB
-app_domain = "Your App Domain"
+app_domain = "hk-f5xc.f5-hyd-xcdemo.com"
 
 #XC WAF
 xc_waf_blocking = true
