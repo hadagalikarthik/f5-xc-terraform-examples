@@ -1,14 +1,14 @@
 #Global
-project_prefix = "prefix"
+project_prefix = "hk-xc-bigip-auto"
 
 # INFRA
 gcp_region = "asia-south1"
-gcp_project_id = "project-id"
-
+gcp_project_id = "f5-gcs-5611-mktg-secsols"
+service_account = "hk-f5-xc"
 #Assets
 nic = false
 nap = false
-bigip = false
+bigip = true
 bigip-cis = false
 aks-cluster = false
 azure-vm = false
