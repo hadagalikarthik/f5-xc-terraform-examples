@@ -4,7 +4,7 @@ project_prefix = "hk-xc-bigip-auto"
 # INFRA
 gcp_region = "asia-south1"
 gcp_project_id = "f5-gcs-5611-mktg-secsols"
-service_account = "ishika@f5-gcs-5611-mktg-secsols.iam.gserviceaccount.com"
+service_account = "hk-f5-xc@f5-gcs-5611-mktg-secsols.iam.gserviceaccount.com"
 #Assets
 nic = false
 nap = false
