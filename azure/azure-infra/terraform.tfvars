@@ -2,7 +2,7 @@
 project_prefix = "hk-xc-auto"
 
 #Azure INFRA
-azure_region = "westus"
+azure_region = "eastus"
 
 #Assets
 nic = false
