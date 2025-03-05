@@ -1,23 +1,24 @@
-resource "volterra_cloud_credentials" "aws_cred" {
-  count = var.aws_ce_site ? 1 : 0
-  name      = format("%s-aws-creds-%s", local.project_prefix, local.build_suffix)
-  namespace = "system"
-  aws_secret_key {
-    access_key = var.aws_access_key
-    secret_key {
-      clear_secret_info {
-        url = "string:///${base64encode(var.aws_secret_key)}"
-      }
-    }
-  }
-}
+# resource "volterra_cloud_credentials" "aws_cred" {
+#   count = var.aws_ce_site ? 1 : 0
+#   name      = format("%s-aws-creds-%s", local.project_prefix, local.build_suffix)
+#   namespace = "system"
+#   aws_secret_key {
+#     access_key = var.aws_access_key
+#     secret_key {
+#       clear_secret_info {
+#         url = "string:///${base64encode(var.aws_secret_key)}"
+#       }
+#     }
+#   }
+# }
 resource "volterra_aws_vpc_site" "aws_site" {
   count = var.aws_ce_site ? 1 : 0
   name       = "${coalesce(var.site_name, local.project_prefix)}"
   namespace  = "system"
   aws_region = local.aws_region
   aws_cred {
-    name      = volterra_cloud_credentials.aws_cred[0].name
+    # name      = volterra_cloud_credentials.aws_cred[0].name
+    name      = "aws-salini-mktg"
     namespace = "system"
   }
   instance_type = "t3.xlarge"
