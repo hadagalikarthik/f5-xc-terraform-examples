@@ -11,4 +11,4 @@ bigip = false
 bigip-cis = false
 aks-cluster = false
 azure-vm = true
-vm_public_ip = true
+vm_public_ip = false

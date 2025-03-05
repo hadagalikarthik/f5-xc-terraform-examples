@@ -16,7 +16,7 @@ xc_waf_blocking = true
 xc_data_guard = "false"
 
 #XC Azure CE site creation
-az_ce_site = "false"
+az_ce_site = "true"
 
 #XC Service Discovery
 xc_service_discovery = "false"
@@ -26,9 +26,9 @@ k8s_pool = "false"
 serviceName = ""
 serviceport = ""
 advertise_sites = "false"
-http_only = "false"
-xc_delegation = "false"
-ip_address_on_site_pool = "false"
+http_only = "true"
+xc_delegation = "true"
+ip_address_on_site_pool = "true"
 eks_ce_site = "false"
 user_site = "false"
 
