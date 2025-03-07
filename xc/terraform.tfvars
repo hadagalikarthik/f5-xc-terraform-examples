@@ -19,13 +19,13 @@ xc_data_guard = "false"
 az_ce_site = "true"
 
 #XC Service Discovery
-xc_service_discovery = "false"
+xc_service_discovery = "true"
 
 # pool and LB inputs
-k8s_pool = "false"
-serviceName = ""
-serviceport = ""
-advertise_sites = "false"
+k8s_pool = "true"
+serviceName = "frontend.default"
+serviceport = "80"
+advertise_sites = "true"
 http_only = "true"
 xc_delegation = "true"
 ip_address_on_site_pool = "true"
@@ -74,5 +74,5 @@ site_name = ""
 
 # infra (Needed values: aws-infra, azure-infra, gcp-infra)
 aws   = ""
-azure = ""
+azure = "azure-infra"
 gcp   = ""
