@@ -28,7 +28,7 @@ serviceport = "80"
 advertise_sites = "true"
 http_only = "true"
 xc_delegation = "true"
-ip_address_on_site_pool = "true"
+# ip_address_on_site_pool = "true"
 eks_ce_site = "false"
 user_site = "false"
 
