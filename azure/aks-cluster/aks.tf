@@ -5,8 +5,8 @@ resource "azurerm_kubernetes_cluster" "ce_waap" {
   dns_prefix          = format("%s-aks-dns-%s", local.project_prefix, local.build_suffix)
   default_node_pool {
     name                = "default"
-    node_count          = 2
-    vm_size             = "Standard_D2_v2"
+    node_count          = 1
+    vm_size             = "Standard_D3_v2"
     vnet_subnet_id      = var.use_new_vnet ? null : local.subnet_id
     auto_scaling_enabled= false
     # below field is renamed in latest resource version
