@@ -9,7 +9,7 @@ xc_tenant = "treino-ufahspac"
 xc_namespace = "hk-namespace"
 
 #XC LB
-app_domain = "hk-f5xc.f5-hyd-xcdemo.com"
+app_domain = "hk2-f5xc.f5-hyd-xcdemo.com"
 
 #XC WAF
 xc_waf_blocking = true
