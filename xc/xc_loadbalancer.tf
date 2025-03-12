@@ -15,7 +15,8 @@ resource "null_resource" "wait_for_aws_ce_site"{
 }
 
 resource "null_resource" "validation-wait-k8s" {
-  count = var.k8s_pool ? 1 : 0
+  depends_on             = [null_resource.wait_for_site]
+  count = var.az_ce_site ? 1 : 0
   provisioner "local-exec" {
     command = "sleep 120"
   }
