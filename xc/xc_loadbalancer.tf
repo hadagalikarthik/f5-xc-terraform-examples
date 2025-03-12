@@ -14,10 +14,18 @@ resource "null_resource" "wait_for_aws_ce_site"{
   depends_on      =  [volterra_tf_params_action.example]
 }
 
+#add sleep with null_resource IFF var.k8s_pool == "true"
+resource "null_resource" "validation-wait-k8s" {
+  count = var.k8s_pool ? 1 : 0
+  provisioner "local-exec" {
+    command = "sleep 120"
+  }
+}
+
 # Create XC LB config
 resource "volterra_origin_pool" "op" {
   depends_on             = [null_resource.wait_for_site, null_resource.check_site_status_cert,
-    null_resource.wait_for_ekssite, null_resource.wait_for_aws_ce_site, volterra_namespace.this]
+    null_resource.wait_for_ekssite, null_resource.wait_for_aws_ce_site, volterra_namespace.this, null_resource.validation-wait-k8s]
   name                   = format("%s-xcop-%s", local.project_prefix, local.build_suffix)
   namespace              = var.xc_namespace
   description            = format("Origin pool pointing to origin server %s", local.origin_server)
@@ -56,7 +64,7 @@ resource "volterra_origin_pool" "op" {
       }
     }
   }
-
+#add sleep
   dynamic "origin_servers" {
     for_each = var.k8s_pool ? [1] : []
     content {
