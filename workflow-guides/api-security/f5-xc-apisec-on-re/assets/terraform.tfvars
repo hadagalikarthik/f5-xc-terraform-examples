@@ -1,13 +1,13 @@
 #Project Global
-project_prefix = "Project prefix, this will be applied as a prefix to all assets created"
+project_prefix = "hk-xc-auto"
 
 #XC Global
-api_url = "https://<Your Tenant>.console.ves.volterra.io/api"
-xc_tenant = "Your tenant name"
-xc_namespace = "Your XC namespace"
+api_url = "https://treino.console.ves.volterra.io/api"
+xc_tenant = "treino-ufahspac"
+xc_namespace = "hk-namespace"
 
 #XC LB
-app_domain = "Your App Domain"
+app_domain = "hk-f5xc-api.f5-hyd-xcdemo.com"
 dns_origin_pool = "false" #Set to true if using an FQDN for the origin server
 origin_server   = "IP or FQDN of your origin"
 origin_port     = "Port of your origin"
